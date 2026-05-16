@@ -49,7 +49,7 @@ chmod +x ios-media-dumper.sh
 3. Run the script:
 
 ```bash
-./ios-media-dumper
+./ios-media-dumper.sh
 ```
 
 4. Media will be downloaded into:
