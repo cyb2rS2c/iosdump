@@ -4,7 +4,7 @@ set -euo pipefail
 
 TARGET_DIR="iphone_media"
 ERROR_LOG="/tmp/afc_error.log"
-
+find . -type d -iname "$TARGET_DIR" -exec rm -rf {} +
 mkdir -p "$TARGET_DIR/DCIM"
 
 echo "Fetching media from iPhone..."
@@ -36,5 +36,6 @@ afcclient ls DCIM 2>/dev/null | while IFS= read -r d; do
 done
 
 echo
+clear
 echo "Download complete."
 tree "$TARGET_DIR"
