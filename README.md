@@ -25,7 +25,7 @@ It connects via Apple File Conduit (AFC) and pulls data directly from the **DCIM
 - No iTunes or GUI required
 - Includes device information fetcher
 - Fully terminal-based workflow
-
+- Extracts all media files (including photos hidden via iOS "Hidden Album" feature)
 ---
 
 ## Requirements
