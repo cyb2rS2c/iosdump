@@ -1,34 +1,46 @@
-# ios-media-dumper
+# iosdump
 
-> **Dump photos and videos from iPhones and iPads using AFC (`afcclient`) and `libimobiledevice`.**
+> 📱 **Dump photos & videos from iPhones and iPads over USB using AFC (Apple File Conduit).**
 
-![Platform](https://img.shields.io/badge/%7C%20Linux-green?logo=linux)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-![Version](https://img.shields.io/badge/Version-1.0-orange)
+![Platform](https://img.shields.io/badge/platform-Linux-2ea44f?logo=linux&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-support-blue?logo=apple&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-yellow?logo=open-source-initiative&logoColor=black)
+![Version](https://img.shields.io/badge/version-1.0.0-orange?logo=semantic-release&logoColor=white)
 
 ---
 
+## Overview
+
+`iosdump` is a lightweight terminal tool for extracting media from iOS devices without iTunes or proprietary software.
+
+It connects via Apple File Conduit (AFC) and pulls data directly from the **DCIM directory**, preserving the original folder structure (e.g. `123APPLE`).
+
+---
 
 ## Features
 
-- Pulls media directly from the `DCIM` folder
-- Preserves folder structure
-- No iTunes required
+- Export photos and videos from iOS devices via USB
+- Direct access to `DCIM` folders
+- Preserves folder structure during export
+- No iTunes or GUI required
+- Includes device information fetcher
+- Fully terminal-based workflow
+
+---
 
 ## Requirements
 
-- `afcclient` (part of `libimobiledevice`)
-- `libimobiledevice` tools
+```bash
+sudo apt update
+sudo apt install libimobiledevice-utils tree
+```
 
 ## Installation
 
 ### Ubuntu / Debian
 
 ```bash
-sudo apt update
-sudo apt install libimobiledevice-utils tree
-git clone https://github.com/cyb2rS2c/ios-media-dumper.git
-cd ios-media-dumper
+git clone https://github.com/cyb2rS2c/iosdump.git;cd iosdump;chmod +x *.sh
 ```
 
 ### Arch Linux
@@ -39,23 +51,13 @@ sudo pacman -S libimobiledevice tree
 
 ## Usage
 
-1. Connect your iPhone or iPad via USB and trust the computer.
-2. Make the script executable:
-
+### Dump media
 ```bash
-chmod +x ios-media-dumper.sh
+./iosdump.sh
 ```
-
-3. Run the script:
-
+### Device info
 ```bash
-./ios-media-dumper.sh
-```
-
-4. Media will be downloaded into:
-
-```text
-iphone_media/DCIM/
+./info_fetcher.sh
 ```
 
 ## Notes
@@ -64,6 +66,7 @@ iphone_media/DCIM/
 - Tested on Linux.
 - Empty directories are skipped automatically.
 - Errors are logged temporarily to `/tmp/afc_error.log`.
+- Media will be downloaded into: `iphone_media/DCIM/`
 
 
 ## License
