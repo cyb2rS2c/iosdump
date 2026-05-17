@@ -1,6 +1,6 @@
 # iosdump
 
-> 📱 **Dump photos & videos from iPhones and iPads over USB using AFC (Apple File Conduit).**
+> 📱 **Easily transfer photos and videos from iPhones and iPads over USB using AFC (Apple File Conduit).**
 
 ![Platform](https://img.shields.io/badge/platform-Linux-2ea44f?logo=linux&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-support-blue?logo=apple&logoColor=white)
