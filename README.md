@@ -53,7 +53,7 @@ sudo pacman -S libimobiledevice tree
 
 ### Dump media
 ```bash
-./iosdump.sh
+./ios-media-dumper.sh
 ```
 ### Device info
 ```bash
