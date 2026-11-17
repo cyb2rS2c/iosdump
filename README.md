@@ -1,6 +1,6 @@
 # iosdump
 
-> 📱 **Easily transfer photos and videos from iPhones and iPads over USB using AFC (Apple File Conduit).**
+> 📱 **iPhone data dumper for Linux. Download media, collect device information, and create local iPhone backups over USB.**
 
 ![Platform](https://img.shields.io/badge/platform-Linux-2ea44f?logo=linux&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-support-blue?logo=apple&logoColor=white)
@@ -11,21 +11,31 @@
 
 ## Overview
 
-`iosdump` is a lightweight terminal tool for extracting media from iOS devices without iTunes or proprietary software.
+`iosdump` is a lightweight, terminal-based iPhone data collection tool for Linux.
 
+It uses Apple's AFC (Apple File Conduit) protocol and the libimobiledevice toolkit to communicate with connected iPhones and iPads over USB.
+
+Unlike a basic media downloader, iosdump combines device information collection, media downloading, and local iPhone backup creation into one workflow.
+
+The goal is to provide a centralized way to collect and organize accessible iPhone data without iTunes or proprietary desktop software.
 It connects via Apple File Conduit (AFC) and pulls data directly from the **DCIM directory**, preserving the original folder structure (e.g. `123APPLE`).
 
 ---
 
 ## Features
 
-- Export photos and videos from iOS devices via USB
-- Direct access to `DCIM` folders
-- Preserves folder structure during export
-- No iTunes or GUI required
-- Includes device information fetcher
-- Fully terminal-based workflow
-- Extracts all media files (including photos hidden via iOS "Hidden Album" feature)
+Features
+
+    📸 Download photos and videos directly from the iPhone DCIM directory.
+    📂 Preserve the original DCIM folder structure.
+    📱 Collect iPhone device information and iOS version.
+    💾 Create local iPhone backups using idevicebackup2.
+    📊 Terminal-based progress indicator.
+    📝 Centralized error logging.
+    🔌 USB communication using AFC and libimobiledevice.
+    📁 Organized output directories for different data categories.
+    💻 No graphical interface required.
+    🐧 Designed for Linux.
 ---
 
 ## Requirements
@@ -59,15 +69,6 @@ sudo pacman -S libimobiledevice tree
 ```bash
 ./info_fetcher.sh
 ```
-
-## Notes
-
-- Requires AFC access.
-- Tested on Linux.
-- Empty directories are skipped automatically.
-- Errors are logged temporarily to `/tmp/afc_error.log`.
-- Media will be downloaded into: `iphone_media/DCIM/`
-
 
 ## License
 
