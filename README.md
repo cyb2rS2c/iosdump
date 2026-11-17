@@ -24,8 +24,6 @@ It connects via Apple File Conduit (AFC) and pulls data directly from the **DCIM
 
 ## Features
 
-Features
-
     📸 Download photos and videos directly from the iPhone DCIM directory.
     📂 Preserve the original DCIM folder structure.
     📱 Collect iPhone device information and iOS version.
@@ -69,6 +67,8 @@ sudo pacman -S libimobiledevice tree
 ```bash
 ./info_fetcher.sh
 ```
+### Screenshots:
+<img width="372" height="234" alt="example" src="https://github.com/user-attachments/assets/69436080-d9b1-4705-b4c8-625425760440" />
 
 ## License
 
